@@ -1,0 +1,17 @@
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+ro = np.arange (0.01, 2.0, 0.01)
+pi0 = 1/(1 + 2*ro + 2*ro**2)
+pi1 = (2*ro)/(1 + 2*ro + 2*ro**2)
+pi2 = (2*ro**2)/(1 + 2*ro + 2*ro**2)
+plt.plot(ro,pi0, label = r" $\pi_0$")
+plt.plot(ro,pi1, linestyle = ':', label = r" $\pi_1$")
+plt.plot(ro,pi2, linestyle = '--', label = r" $\pi_2$")
+plt.title('Расчет стационарных вероятностей')  
+#plt.xlabel('Вероятность работоспособности элемента 1')  
+#plt.ylabel('Надежность системы')  
+plt.grid(True)
+plt.legend()
+plt.show()
